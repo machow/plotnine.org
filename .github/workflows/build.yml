@@ -44,7 +44,7 @@ jobs:
       - name: Checkout Plotnine Version
         shell: bash
         run: |
-          make checkout-${{ inputs.plotnine-doc-version }}
+          make checkout-${{ inputs.plotnine-doc-version || 'pr' }}
           pushd plotnine; echo $(git tag -l --contains HEAD | head -n 1); popd
 
       - name: Build Site
