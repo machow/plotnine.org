@@ -76,7 +76,6 @@ jobs:
       - name: Create Github Deployment
         uses: bobheadxi/deployments@v1
         id: deployment
-        if: ${{ !github.event.pull_request.head.repo.fork }}
         with:
           step: start
           token: ${{ secrets.GITHUB_TOKEN }}
