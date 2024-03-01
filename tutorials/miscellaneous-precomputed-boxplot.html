@@ -116,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">plotnine 0.0.post1+ga171cd7</span>
+    <span class="navbar-title">plotnine 0.0.post20+ga171cd7</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -199,7 +199,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div id="cell-2" class="cell" data-execution_count="10">
+<div id="cell-2" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:08:25.134235Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:08:25.133927Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:08:25.908614Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:08:25.907712Z&quot;}" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -214,14 +214,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">'ignore'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Plotting a boxplot when a dataset fits in memory is simple as shown below:</p>
-<div id="cell-4" class="cell" data-execution_count="11">
+<div id="cell-4" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:08:25.911872Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:08:25.911632Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:08:25.926819Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:08:25.926245Z&quot;}" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pageviews[<span class="st">'hour'</span>] <span class="op">=</span> pageviews.date_hour.dt.hour</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>display(<span class="ss">f'Dataset contains </span><span class="sc">{</span>pageviews<span class="sc">.</span>shape[<span class="dv">0</span>]<span class="sc">}</span><span class="ss"> rows'</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>pageviews.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>'Dataset contains 348 rows'</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="11">
+<div class="cell-output cell-output-display" data-execution_count="2">
 <div>
 <div>
 
@@ -273,7 +273,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="cell-5" class="cell" data-execution_count="12">
+<div id="cell-5" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:08:25.963836Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:08:25.963566Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:08:27.739498Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:08:27.738894Z&quot;}" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>(</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    ggplot(pageviews)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_boxplot(aes(x<span class="op">=</span><span class="st">'factor(hour)'</span>, y<span class="op">=</span><span class="st">'pageviews'</span>))</span>
@@ -288,19 +288,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>But suppose we had 348 million rows in a datastore. This becomes impractical to fetch and compute the boxplot on the fly. Instead we can precompute the aggregate statistics and use that to plot the boxplot directly.</p>
 <p>Below we calculate the aggregate statistics in Pandas, but this could also be done in SQL/Pyspark on your datastore of choice. For simplicity, in this example, outliers haven’t been removed before determining aggregate statistics.</p>
-<div id="cell-7" class="cell" data-execution_count="13">
+<div id="cell-7" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:08:27.742670Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:08:27.742345Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:08:27.745811Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:08:27.745291Z&quot;}" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> q25(x):</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x.quantile(<span class="fl">0.25</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> q75(x):</span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x.quantile(<span class="fl">0.75</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-8" class="cell" data-execution_count="14">
+<div id="cell-8" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:08:27.748690Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:08:27.748473Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:08:27.780033Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:08:27.779367Z&quot;}" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>precomputed_metrics <span class="op">=</span> pageviews.groupby(<span class="st">"hour"</span>).agg({<span class="st">'pageviews'</span>: [np.<span class="bu">min</span>, q25, np.median, q75, np.<span class="bu">max</span>]})</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>precomputed_metrics.columns <span class="op">=</span> [col_name[<span class="dv">1</span>] <span class="cf">for</span> col_name <span class="kw">in</span> precomputed_metrics.columns]  </span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>precomputed_metrics <span class="op">=</span> precomputed_metrics.reset_index()</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>precomputed_metrics.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="14">
+<div class="cell-output cell-output-display" data-execution_count="5">
 <div>
 <div>
 
@@ -371,7 +371,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>A simpler boxplot (without outlier points shown) can then be plotted:</p>
-<div id="cell-10" class="cell" data-execution_count="15">
+<div id="cell-10" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:08:27.782848Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:08:27.782634Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:08:28.576376Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:08:28.575777Z&quot;}" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>(</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    ggplot(precomputed_metrics)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_boxplot(aes(x<span class="op">=</span><span class="st">'factor(hour)'</span>, ymin<span class="op">=</span><span class="st">'min'</span>, lower<span class="op">=</span><span class="st">"q25"</span>, middle<span class="op">=</span><span class="st">"median"</span>, upper<span class="op">=</span><span class="st">"q75"</span>, ymax<span class="op">=</span><span class="st">"max"</span>), stat <span class="op">=</span> <span class="st">"identity"</span>)</span>

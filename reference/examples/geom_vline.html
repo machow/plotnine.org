@@ -116,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">plotnine 0.0.post1+ga171cd7</span>
+    <span class="navbar-title">plotnine 0.0.post20+ga171cd7</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -199,7 +199,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div id="cell-1" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:46:58.595494Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:46:58.595176Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:46:59.381018Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:46:59.379465Z&quot;}" data-execution_count="1">
+<div id="cell-1" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:07:08.907714Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:07:08.907347Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:07:09.612527Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:07:09.611723Z&quot;}" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> (</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    ggplot,</span>
@@ -212,7 +212,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine.data <span class="im">import</span> mpg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><code>geom_vline()</code> draws a vertical line, and is useful as a guide.</p>
-<div id="cell-3" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:46:59.385346Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:46:59.385042Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:46:59.401780Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:46:59.400832Z&quot;}" data-execution_count="2">
+<div id="cell-3" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:07:09.615984Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:07:09.615717Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:07:09.629911Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:07:09.629257Z&quot;}" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>mpg.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <div>
@@ -315,7 +315,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>It’s useful to use <code>geom_vline()</code> with some data, so we start with a basic scatter plot:</p>
-<div id="cell-5" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:46:59.449030Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:46:59.448649Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:47:00.757704Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:47:00.757049Z&quot;}" data-execution_count="3">
+<div id="cell-5" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:07:09.671944Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:07:09.671680Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:07:10.815452Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:07:10.814785Z&quot;}" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>(</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    ggplot(mpg, aes(x<span class="op">=</span><span class="st">"displ"</span>, y<span class="op">=</span><span class="st">"hwy"</span>))</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_point()</span>
@@ -330,7 +330,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Add a vertical line to the scatter plot:</p>
-<div id="cell-7" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:47:00.761063Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:47:00.760710Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:47:01.075991Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:47:01.075362Z&quot;}" data-execution_count="4">
+<div id="cell-7" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:07:10.818745Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:07:10.818407Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:07:11.093882Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:07:11.093281Z&quot;}" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>(</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    ggplot(mpg, aes(x<span class="op">=</span><span class="st">"displ"</span>, y<span class="op">=</span><span class="st">"hwy"</span>))</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_point()</span>
@@ -346,7 +346,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>You can add many vertical lines:</p>
-<div id="cell-9" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:47:01.079145Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:47:01.078752Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:47:01.392802Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:47:01.392211Z&quot;}" data-execution_count="5">
+<div id="cell-9" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:07:11.096606Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:07:11.096388Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:07:11.367669Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:07:11.367132Z&quot;}" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>(</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    ggplot(mpg, aes(x<span class="op">=</span><span class="st">"displ"</span>, y<span class="op">=</span><span class="st">"hwy"</span>))</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_point()</span>
@@ -361,7 +361,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="cell-10" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:47:01.395740Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:47:01.395483Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:47:01.703251Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:47:01.702748Z&quot;}" data-execution_count="6">
+<div id="cell-10" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:07:11.370384Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:07:11.370175Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:07:11.648455Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:07:11.647919Z&quot;}" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>(</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    ggplot(mpg, aes(x<span class="op">=</span><span class="st">"displ"</span>, y<span class="op">=</span><span class="st">"hwy"</span>))</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_point()</span>
@@ -382,18 +382,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Add vertical lines to a facet plot:</p>
-<div id="cell-12" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:47:01.706480Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:47:01.706237Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:47:02.177160Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:47:02.176594Z&quot;}" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    ggplot(mpg, aes(x<span class="op">=</span><span class="st">"displ"</span>, y<span class="op">=</span><span class="st">"hwy"</span>))</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_point()</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_vline(xintercept<span class="op">=</span><span class="dv">5</span>)  <span class="co"># add a vertical line...</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> facet_grid(<span class="st">"drv"</span>)  <span class="co"># ... to a facet plot</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> labs(x<span class="op">=</span><span class="st">"displacement"</span>, y<span class="op">=</span><span class="st">"horsepower"</span>)</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-12" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:07:11.651078Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:07:11.650878Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:07:11.653530Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:07:11.653018Z&quot;}" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">### Facets with a Verticle Line</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-13" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:07:11.656074Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:07:11.655875Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:07:12.075676Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:07:12.074957Z&quot;}" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gallery, points</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    ggplot(mpg, aes(x<span class="op">=</span><span class="st">"displ"</span>, y<span class="op">=</span><span class="st">"hwy"</span>))</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_point()</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_vline(xintercept<span class="op">=</span><span class="dv">5</span>)  <span class="co"># add a vertical line...</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> facet_grid(<span class="st">"drv"</span>)  <span class="co"># ... to a facet plot</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> labs(x<span class="op">=</span><span class="st">"displacement"</span>, y<span class="op">=</span><span class="st">"horsepower"</span>)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="geom_vline_files/figure-html/cell-8-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="geom_vline_files/figure-html/cell-9-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>

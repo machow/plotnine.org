@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">plotnine 0.0.post1+ga171cd7</span>
+    <span class="navbar-title">plotnine 0.0.post20+ga171cd7</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -137,11 +137,26 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#point-plots" id="toc-point-plots" class="nav-link active" data-scroll-target="#point-plots">Point Plots</a></li>
+  <li><a href="#line-plots" id="toc-line-plots" class="nav-link" data-scroll-target="#line-plots">Line Plots</a></li>
+  <li><a href="#bar-plots" id="toc-bar-plots" class="nav-link" data-scroll-target="#bar-plots">Bar Plots</a></li>
+  <li><a href="#distribution-plots" id="toc-distribution-plots" class="nav-link" data-scroll-target="#distribution-plots">Distribution Plots</a></li>
+  <li><a href="#tile-plots" id="toc-tile-plots" class="nav-link" data-scroll-target="#tile-plots">Tile Plots</a></li>
+  <li><a href="#map-plots" id="toc-map-plots" class="nav-link" data-scroll-target="#map-plots">Map Plots</a></li>
+  <li><a href="#complex-plots" id="toc-complex-plots" class="nav-link" data-scroll-target="#complex-plots">Complex Plots</a></li>
+  <li><a href="#path-plots" id="toc-path-plots" class="nav-link" data-scroll-target="#path-plots">path Plots</a></li>
+  <li><a href="#label-plots" id="toc-label-plots" class="nav-link" data-scroll-target="#label-plots">label Plots</a></li>
+  <li><a href="#theme-plots" id="toc-theme-plots" class="nav-link" data-scroll-target="#theme-plots">theme Plots</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -162,17 +177,60 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="column-body-outset">
-<div class="gallery grid">
-<div class="card g-col-12 g-col-sm-6 g-col-md-4">
+<section id="point-plots" class="level2 gallery">
+<h2 class="gallery anchored" data-anchor-id="point-plots">Point Plots</h2>
+<div class="grid">
+<div class="card g-col-12 g-col-sm-6 g-col-md-3">
 <div class="card-header">
-<p>Spiral Animation</p>
+<p>Basic Point Plot</p>
 </div>
 <div class="card-body">
-<p><a href="../reference/PlotnineAnimation.html#spiral-animation"><img src="thumbnails/PlotnineAnimation-spiral-animation.png" class="img-fluid"></a></p>
+<p><a href="../reference/geom_point.html#basic-point-plot"><img src="thumbnails/geom_point-basic-point-plot.png" class="img-fluid"></a></p>
 </div>
 </div>
-<div class="card g-col-12 g-col-sm-6 g-col-md-4">
+<div class="card g-col-12 g-col-sm-6 g-col-md-3">
+<div class="card-header">
+<p>Point Groups and Linear Models</p>
+</div>
+<div class="card-body">
+<p><a href="../reference/geom_smooth.html#point-groups-and-linear-models"><img src="thumbnails/geom_smooth-point-groups-and-linear-models.png" class="img-fluid"></a></p>
+</div>
+</div>
+<div class="card g-col-12 g-col-sm-6 g-col-md-3">
+<div class="card-header">
+<p>Vertical line</p>
+</div>
+<div class="card-body">
+<p><a href="../reference/geom_vline.html#vertical-line"><img src="thumbnails/geom_vline-vertical-line.png" class="img-fluid"></a></p>
+</div>
+</div>
+</div>
+</section>
+<section id="line-plots" class="level2 gallery">
+<h2 class="gallery anchored" data-anchor-id="line-plots">Line Plots</h2>
+<div class="grid">
+<div class="card g-col-12 g-col-sm-6 g-col-md-3">
+<div class="card-header">
+<p>Shaded Area Under Line</p>
+</div>
+<div class="card-body">
+<p><a href="../reference/geom_area.html#shaded-area-under-line"><img src="thumbnails/geom_area-shaded-area-under-line.png" class="img-fluid"></a></p>
+</div>
+</div>
+<div class="card g-col-12 g-col-sm-6 g-col-md-3">
+<div class="card-header">
+<p>Basice Line Plot</p>
+</div>
+<div class="card-body">
+<p><a href="../reference/geom_line.html#basice-line-plot"><img src="thumbnails/geom_line-basice-line-plot.png" class="img-fluid"></a></p>
+</div>
+</div>
+</div>
+</section>
+<section id="bar-plots" class="level2 gallery">
+<h2 class="gallery anchored" data-anchor-id="bar-plots">Bar Plots</h2>
+<div class="grid">
+<div class="card g-col-12 g-col-sm-6 g-col-md-3">
 <div class="card-header">
 <p>Two Variable Bar Plot</p>
 </div>
@@ -180,63 +238,100 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="../reference/geom_col.html#two-variable-bar-plot"><img src="thumbnails/geom_col-two-variable-bar-plot.png" class="img-fluid"></a></p>
 </div>
 </div>
-<div class="card g-col-12 g-col-sm-6 g-col-md-4">
+<div class="card g-col-12 g-col-sm-6 g-col-md-3">
 <div class="card-header">
-<p>Shading a Region under a Density Curve</p>
+<p>Ordered Horizontal Bar Plot</p>
 </div>
 <div class="card-body">
-<p><a href="../reference/geom_density.html#shading-a-region-under-a-density-curve"><img src="thumbnails/geom_density-shading-a-region-under-a-density-curve.png" class="img-fluid"></a></p>
+<p><a href="../tutorials/miscellaneous-order-plot-series.html#ordered-horizontal-bar-plot"><img src="thumbnails/miscellaneous-order-plot-series-ordered-horizontal-bar-plot.png" class="img-fluid"></a></p>
 </div>
 </div>
-<div class="card g-col-12 g-col-sm-6 g-col-md-4">
+<div class="card g-col-12 g-col-sm-6 g-col-md-3">
 <div class="card-header">
-<p>The Political Territories of Westeros</p>
+<p>Bar Plot with Group Percentages</p>
 </div>
 <div class="card-body">
-<p><a href="../reference/geom_map.html#the-political-territories-of-westeros"><img src="thumbnails/geom_map-the-political-territories-of-westeros.png" class="img-fluid"></a></p>
+<p><a href="../tutorials/miscellaneous-show-counts-and-percentages-for-bar-plots.html#bar-plot-with-group-percentages"><img src="thumbnails/miscellaneous-show-counts-and-percentages-for-bar-plots-bar-plot-with-group-percentages.png" class="img-fluid"></a></p>
 </div>
 </div>
-<div class="card g-col-12 g-col-sm-6 g-col-md-4">
+<div class="card g-col-12 g-col-sm-6 g-col-md-3">
 <div class="card-header">
-<p>Ranges of Similar Variables</p>
+<p>Stacked Bar Plot with Group Percentages</p>
 </div>
 <div class="card-body">
-<p><a href="../reference/geom_segment.html#ranges-of-similar-variables"><img src="thumbnails/geom_segment-ranges-of-similar-variables.png" class="img-fluid"></a></p>
+<p><a href="../tutorials/miscellaneous-show-counts-and-percentages-for-bar-plots.html#stacked-bar-plot-with-group-percentages"><img src="thumbnails/miscellaneous-show-counts-and-percentages-for-bar-plots-stacked-bar-plot-with-group-percentages.png" class="img-fluid"></a></p>
 </div>
 </div>
-<div class="card g-col-12 g-col-sm-6 g-col-md-4">
+</div>
+</section>
+<section id="distribution-plots" class="level2 gallery">
+<h2 class="gallery anchored" data-anchor-id="distribution-plots">Distribution Plots</h2>
+<div class="grid">
+<div class="card g-col-12 g-col-sm-6 g-col-md-3">
 <div class="card-header">
-<p>Change in Rank</p>
+<p>Bar Plot with Counts</p>
 </div>
 <div class="card-body">
-<p><a href="../reference/geom_segment.html#change-in-rank"><img src="thumbnails/geom_segment-change-in-rank.png" class="img-fluid"></a></p>
+<p><a href="../reference/geom_bar.html#bar-plot-with-counts"><img src="thumbnails/geom_bar-bar-plot-with-counts.png" class="img-fluid"></a></p>
 </div>
 </div>
-<div class="card g-col-12 g-col-sm-6 g-col-md-4">
+<div class="card g-col-12 g-col-sm-6 g-col-md-3">
 <div class="card-header">
-<p>Smoothed conditional means</p>
+<p>Horizontal Bar Plot with Counts</p>
 </div>
 <div class="card-body">
-<p><a href="../reference/geom_smooth.html#smoothed-conditional-means"><img src="thumbnails/geom_smooth-smoothed-conditional-means.png" class="img-fluid"></a></p>
+<p><a href="../reference/geom_bar.html#horizontal-bar-plot-with-counts"><img src="thumbnails/geom_bar-horizontal-bar-plot-with-counts.png" class="img-fluid"></a></p>
 </div>
 </div>
-<div class="card g-col-12 g-col-sm-6 g-col-md-4">
+<div class="card g-col-12 g-col-sm-6 g-col-md-3">
 <div class="card-header">
-<p>Periodic Table of Elements</p>
+<p>A Basic Boxplot</p>
 </div>
 <div class="card-body">
-<p><a href="../reference/geom_tile.html#periodic-table-of-elements"><img src="thumbnails/geom_tile-periodic-table-of-elements.png" class="img-fluid"></a></p>
+<p><a href="../reference/geom_boxplot.html#a-basic-boxplot"><img src="thumbnails/geom_boxplot-a-basic-boxplot.png" class="img-fluid"></a></p>
 </div>
 </div>
-<div class="card g-col-12 g-col-sm-6 g-col-md-4">
+<div class="card g-col-12 g-col-sm-6 g-col-md-3">
 <div class="card-header">
-<p>Annotated Heatmap</p>
+<p>Basic Density Plot</p>
 </div>
 <div class="card-body">
-<p><a href="../reference/geom_tile.html#annotated-heatmap"><img src="thumbnails/geom_tile-annotated-heatmap.png" class="img-fluid"></a></p>
+<p><a href="../reference/geom_density.html#basic-density-plot"><img src="thumbnails/geom_density-basic-density-plot.png" class="img-fluid"></a></p>
 </div>
 </div>
-<div class="card g-col-12 g-col-sm-6 g-col-md-4">
+<div class="card g-col-12 g-col-sm-6 g-col-md-3">
+<div class="card-header">
+<p>Density Plot with Groups</p>
+</div>
+<div class="card-body">
+<p><a href="../reference/geom_density.html#density-plot-with-groups"><img src="thumbnails/geom_density-density-plot-with-groups.png" class="img-fluid"></a></p>
+</div>
+</div>
+<div class="card g-col-12 g-col-sm-6 g-col-md-3">
+<div class="card-header">
+<p>Density Plots + Histograms</p>
+</div>
+<div class="card-body">
+<p><a href="../reference/geom_density.html#density-plots---histograms"><img src="thumbnails/geom_density-density-plots---histograms.png" class="img-fluid"></a></p>
+</div>
+</div>
+<div class="card g-col-12 g-col-sm-6 g-col-md-3">
+<div class="card-header">
+<p>Shaded Range Under a Density Plot</p>
+</div>
+<div class="card-body">
+<p><a href="../reference/geom_density.html#shaded-range-under-a-density-plot"><img src="thumbnails/geom_density-shaded-range-under-a-density-plot.png" class="img-fluid"></a></p>
+</div>
+</div>
+<div class="card g-col-12 g-col-sm-6 g-col-md-3">
+<div class="card-header">
+<p>Basic Histogram</p>
+</div>
+<div class="card-body">
+<p><a href="../reference/geom_histogram.html#basic-histogram"><img src="thumbnails/geom_histogram-basic-histogram.png" class="img-fluid"></a></p>
+</div>
+</div>
+<div class="card g-col-12 g-col-sm-6 g-col-md-3">
 <div class="card-header">
 <p>Violins, Boxes, Points and Lines</p>
 </div>
@@ -244,7 +339,54 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="../reference/geom_violin.html#violins--boxes--points-and-lines"><img src="thumbnails/geom_violin-violins--boxes--points-and-lines.png" class="img-fluid"></a></p>
 </div>
 </div>
-<div class="card g-col-12 g-col-sm-6 g-col-md-4">
+</div>
+</section>
+<section id="tile-plots" class="level2 gallery">
+<h2 class="gallery anchored" data-anchor-id="tile-plots">Tile Plots</h2>
+<div class="grid">
+<div class="card g-col-12 g-col-sm-6 g-col-md-3">
+<div class="card-header">
+<p>Periodic Table of Elements</p>
+</div>
+<div class="card-body">
+<p><a href="../reference/geom_tile.html#periodic-table-of-elements"><img src="thumbnails/geom_tile-periodic-table-of-elements.png" class="img-fluid"></a></p>
+</div>
+</div>
+<div class="card g-col-12 g-col-sm-6 g-col-md-3">
+<div class="card-header">
+<p>Annotated Heatmap</p>
+</div>
+<div class="card-body">
+<p><a href="../reference/geom_tile.html#annotated-heatmap"><img src="thumbnails/geom_tile-annotated-heatmap.png" class="img-fluid"></a></p>
+</div>
+</div>
+</div>
+</section>
+<section id="map-plots" class="level2 gallery">
+<h2 class="gallery anchored" data-anchor-id="map-plots">Map Plots</h2>
+<div class="grid">
+<div class="card g-col-12 g-col-sm-6 g-col-md-3">
+<div class="card-header">
+<p>The Territories of Westeros</p>
+</div>
+<div class="card-body">
+<p><a href="../reference/geom_map.html#the-territories-of-westeros"><img src="thumbnails/geom_map-the-territories-of-westeros.png" class="img-fluid"></a></p>
+</div>
+</div>
+</div>
+</section>
+<section id="complex-plots" class="level2 gallery">
+<h2 class="gallery anchored" data-anchor-id="complex-plots">Complex Plots</h2>
+<div class="grid">
+<div class="card g-col-12 g-col-sm-6 g-col-md-3">
+<div class="card-header">
+<p>An Elaborate Range Plot</p>
+</div>
+<div class="card-body">
+<p><a href="../reference/geom_segment.html#an-elaborate-range-plot"><img src="thumbnails/geom_segment-an-elaborate-range-plot.png" class="img-fluid"></a></p>
+</div>
+</div>
+<div class="card g-col-12 g-col-sm-6 g-col-md-3">
 <div class="card-header">
 <p>Guitar Neck</p>
 </div>
@@ -253,9 +395,64 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+</section>
+<section id="path-plots" class="level2 gallery">
+<h2 class="gallery anchored" data-anchor-id="path-plots">path Plots</h2>
+<div class="grid">
+<div class="card g-col-12 g-col-sm-6 g-col-md-3">
+<div class="card-header">
+<p>Path plots</p>
+</div>
+<div class="card-body">
+<p><a href="../reference/geom_path.html#path-plots"><img src="thumbnails/geom_path-path-plots.png" class="img-fluid"></a></p>
+</div>
+</div>
+</div>
+</section>
+<section id="label-plots" class="level2 gallery">
+<h2 class="gallery anchored" data-anchor-id="label-plots">label Plots</h2>
+<div class="grid">
+<div class="card g-col-12 g-col-sm-6 g-col-md-3">
+<div class="card-header">
+<p>Title, Subtitle, Caption &amp; Axis labels</p>
+</div>
+<div class="card-body">
+<p><a href="../reference/labs.html#title--subtitle--caption---axis-labels"><img src="thumbnails/labs-title--subtitle--caption---axis-labels.png" class="img-fluid"></a></p>
+</div>
+</div>
+<div class="card g-col-12 g-col-sm-6 g-col-md-3">
+<div class="card-header">
+<p>Labelling legends</p>
+</div>
+<div class="card-body">
+<p><a href="../reference/labs.html#labelling-legends"><img src="thumbnails/labs-labelling-legends.png" class="img-fluid"></a></p>
+</div>
+</div>
+</div>
+</section>
+<section id="theme-plots" class="level2 gallery">
+<h2 class="gallery anchored" data-anchor-id="theme-plots">theme Plots</h2>
+<div class="grid">
+<div class="card g-col-12 g-col-sm-6 g-col-md-3">
+<div class="card-header">
+<p>Black &amp; White with Gridlines</p>
+</div>
+<div class="card-body">
+<p><a href="../reference/theme_bw.html#black---white-with-gridlines"><img src="thumbnails/theme_bw-black---white-with-gridlines.png" class="img-fluid"></a></p>
+</div>
+</div>
+<div class="card g-col-12 g-col-sm-6 g-col-md-3">
+<div class="card-header">
+<p>A Classic Theme</p>
+</div>
+<div class="card-body">
+<p><a href="../reference/theme_classic.html#a-classic-theme"><img src="thumbnails/theme_classic-a-classic-theme.png" class="img-fluid"></a></p>
+</div>
+</div>
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -113,7 +113,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">plotnine 0.0.post1+ga171cd7</span>
+    <span class="navbar-title">plotnine 0.0.post20+ga171cd7</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -196,7 +196,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div id="cell-2" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:47:32.670228Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:47:32.669922Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:47:33.326021Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:47:33.325268Z&quot;}" data-execution_count="1">
+<div id="cell-2" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:07:58.130754Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:07:58.130437Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:07:58.734556Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:07:58.734022Z&quot;}" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> (</span>
@@ -211,7 +211,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>First, we make up some data. The data we create has <code>y</code> for actual data value and <code>yfit</code> for a hypothetical fitted model. It also has a category column <code>cat</code>.</p>
-<div id="cell-4" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:47:33.329408Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:47:33.329087Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:47:33.334167Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:47:33.333557Z&quot;}" data-execution_count="2">
+<div id="cell-4" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:07:58.738264Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:07:58.737916Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:07:58.742793Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:07:58.742146Z&quot;}" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">10</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    {</span>
@@ -223,7 +223,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Initial plot</p>
-<div id="cell-6" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:47:33.337435Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:47:33.337188Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:47:34.709730Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:47:34.709152Z&quot;}" data-scrolled="false" data-execution_count="3">
+<div id="cell-6" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:07:58.745686Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:07:58.745448Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:07:59.997918Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:07:59.997142Z&quot;}" data-scrolled="false" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>(</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    ggplot(df)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_col(aes(<span class="st">"x"</span>, <span class="st">"y"</span>, fill<span class="op">=</span><span class="st">"cat"</span>))</span>
@@ -239,7 +239,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>There is a clash of colors between the actual data (the bars) and the fitted model (the points and lines). A simple solution is to adjust the colors of the fitted data slightly. We do that by varying the <em>lightness</em> of the default color scale, make them a little darker.</p>
-<div id="cell-8" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:47:34.754178Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:47:34.753777Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:47:35.160270Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:47:35.159652Z&quot;}" data-execution_count="4">
+<div id="cell-8" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:08:00.038227Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:08:00.037809Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:08:00.383044Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:08:00.382429Z&quot;}" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>(</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    ggplot(df)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_col(aes(<span class="st">"x"</span>, <span class="st">"y"</span>, fill<span class="op">=</span><span class="st">"cat"</span>))</span>
@@ -257,7 +257,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>There are two main pieces of information in the plot, but we a single combined legend. Since we use separate aesthetics for the actual data and fitted model, we can have distinct legends for both.</p>
 <p>We manually define the legend for the <code>fill</code> and <code>color</code> aesthetics, this overrides the automatic legend creation.</p>
-<div id="cell-10" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:47:35.164632Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:47:35.163886Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:47:35.611861Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:47:35.611167Z&quot;}" data-execution_count="5">
+<div id="cell-10" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:08:00.385993Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:08:00.385766Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:08:00.759074Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:08:00.758438Z&quot;}" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>(</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    ggplot(df)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_col(aes(<span class="st">"x"</span>, <span class="st">"y"</span>, fill<span class="op">=</span><span class="st">"cat"</span>))</span>

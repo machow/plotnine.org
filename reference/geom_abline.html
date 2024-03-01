@@ -116,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">plotnine 0.0.post1+ga171cd7</span>
+    <span class="navbar-title">plotnine 0.0.post20+ga171cd7</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -302,7 +302,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
 <div class="quarto-embed-nb-cell">
-<div id="cell-0" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:44:17.736459Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:44:17.736165Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:44:18.549359Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:44:18.548472Z&quot;}" data-execution_count="1">
+<div id="cell-0" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:04:38.575096Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:04:38.574718Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:04:39.298800Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:04:39.298058Z&quot;}" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> ggplot, aes, geom_point, labs, geom_abline, facet_grid</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine.data <span class="im">import</span> mpg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -310,7 +310,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="ab-line" class="level3">
 <h3 class="anchored" data-anchor-id="ab-line">AB line</h3>
 <p><code>geom_abline()</code> draws a line when the yintercept and gradient is supplied, and is useful as a guide.</p>
-<div id="cell-2" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:44:18.553067Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:44:18.552788Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:44:18.569650Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:44:18.568969Z&quot;}" data-execution_count="2">
+<div id="cell-2" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:04:39.302218Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:04:39.301959Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:04:39.316114Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:04:39.315530Z&quot;}" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># inspect the data</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>mpg.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
@@ -414,7 +414,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>It’s useful to use <code>geom_abline()</code> with some data, so we start with a basic scatter plot:</p>
-<div id="cell-4" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:44:18.616649Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:44:18.616349Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:44:19.900030Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:44:19.899331Z&quot;}" data-execution_count="3">
+<div id="cell-4" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:04:39.357281Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:04:39.357009Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:04:40.520393Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:04:40.519638Z&quot;}" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>(</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    ggplot(mpg, aes(x<span class="op">=</span><span class="st">"displ"</span>, y<span class="op">=</span><span class="st">"hwy"</span>))</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_point()</span>
@@ -429,7 +429,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Now layer a line over the scatter plot using <code>geom_abline()</code>. <code>geom_abline()</code> requires inputs for the slope (default slope is 1) and y-intercept (default value is [0,0]).</p>
-<div id="cell-6" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:44:19.903430Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:44:19.903069Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:44:20.210542Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:44:20.209896Z&quot;}" data-execution_count="4">
+<div id="cell-6" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:04:40.524013Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:04:40.523637Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:04:40.807330Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:04:40.806772Z&quot;}" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>(</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    ggplot(mpg, aes(x<span class="op">=</span><span class="st">"displ"</span>, y<span class="op">=</span><span class="st">"hwy"</span>))</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_point()</span>
@@ -448,7 +448,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>You can plot two lines on one plot:</p>
-<div id="cell-8" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:44:20.214479Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:44:20.214204Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:44:20.519311Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:44:20.518778Z&quot;}" data-execution_count="5">
+<div id="cell-8" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:04:40.810302Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:04:40.810060Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:04:41.092958Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:04:41.092443Z&quot;}" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>(</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    ggplot(mpg, aes(x<span class="op">=</span><span class="st">"displ"</span>, y<span class="op">=</span><span class="st">"hwy"</span>))</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_point()</span>
@@ -467,7 +467,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>You can change the look of the line:</p>
-<div id="cell-10" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:44:20.522207Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:44:20.521978Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:44:20.822230Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:44:20.821648Z&quot;}" data-execution_count="6">
+<div id="cell-10" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:04:41.095863Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:04:41.095622Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:04:41.370979Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:04:41.370413Z&quot;}" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>(</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    ggplot(mpg, aes(x<span class="op">=</span><span class="st">"displ"</span>, y<span class="op">=</span><span class="st">"hwy"</span>))</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_point()</span>
@@ -489,7 +489,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p><code>geom_abline()</code> can be used with a facet plot:</p>
-<div id="cell-12" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:44:20.825241Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:44:20.825016Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:44:21.313940Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:44:21.312564Z&quot;}" data-execution_count="7">
+<div id="cell-12" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:04:41.373712Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:04:41.373504Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:04:41.805361Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:04:41.804850Z&quot;}" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>(</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    ggplot(mpg, aes(x<span class="op">=</span><span class="st">"displ"</span>, y<span class="op">=</span><span class="st">"hwy"</span>))</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_point()</span>

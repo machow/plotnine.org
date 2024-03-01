@@ -208,7 +208,7 @@
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">plotnine 0.0.post1+ga171cd7</span>
+    <span class="navbar-title">plotnine 0.0.post20+ga171cd7</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -266,7 +266,14 @@
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#bar-plot-with-counts" id="toc-bar-plot-with-counts" class="nav-link active" data-scroll-target="#bar-plot-with-counts">Bar Plot with Counts</a></li>
+  <li><a href="#horizontal-bar-plot-with-counts" id="toc-horizontal-bar-plot-with-counts" class="nav-link" data-scroll-target="#horizontal-bar-plot-with-counts">Horizontal Bar Plot with Counts</a></li>
+  </ul>
+</nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -289,7 +296,7 @@
   
 
 
-</header>   <div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="cell-1" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:44:25.502759Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:44:25.502448Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:44:26.310296Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:44:26.309368Z&quot;}" data-execution_count="1">
+</header>     <div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="cell-1" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:04:51.893913Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:04:51.893540Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:04:52.603936Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:04:52.603181Z&quot;}" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> ggplot, aes, geom_bar, coord_flip, theme_classic</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine.data <span class="im">import</span> mpg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -297,7 +304,7 @@
 <div id="cell-2" class="cell markdown">
 <p><em>geom_bar() makes the height of the bar proportional to the number of cases in each group</em></p>
 </div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div id="cell-3" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:44:26.315322Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:44:26.314992Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:44:26.331649Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:44:26.330940Z&quot;}" data-execution_count="2">
+<div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div id="cell-3" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:04:52.607290Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:04:52.607031Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:04:52.621023Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:04:52.620406Z&quot;}" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>mpg.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <div>
@@ -399,8 +406,14 @@
 </div>
 </div>
 </div></div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="cell-4" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:44:26.377175Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:44:26.376900Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:44:27.692447Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:44:27.691805Z&quot;}" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>ggplot(mpg) <span class="op">+</span> geom_bar(aes(x<span class="op">=</span><span class="st">"class"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-4" class="cell markdown">
+<section id="bar-plot-with-counts" class="level3">
+<h3 class="anchored" data-anchor-id="bar-plot-with-counts">Bar Plot with Counts</h3>
+</section>
+</div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="cell-5" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:04:52.662898Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:04:52.662627Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:04:53.797591Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:04:53.796732Z&quot;}" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gallery, distributions</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>ggplot(mpg) <span class="op">+</span> geom_bar(aes(x<span class="op">=</span><span class="st">"class"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div class="">
 <figure class="figure">
@@ -409,7 +422,7 @@
 </div>
 </div>
 </div></div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [4]:</pre></div><div id="cell-5" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:44:27.695596Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:44:27.695235Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:44:28.075385Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:44:28.074704Z&quot;}" data-execution_count="4">
+<div class="cell-container"><div class="cell-decorator"><pre>In [4]:</pre></div><div id="cell-6" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:04:53.801079Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:04:53.800702Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:04:54.117778Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:04:54.117177Z&quot;}" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>(</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    ggplot(mpg)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_bar(aes(x<span class="op">=</span><span class="st">"class"</span>, fill<span class="op">=</span><span class="st">"drv"</span>))</span>
@@ -422,13 +435,19 @@
 </div>
 </div>
 </div></div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [5]:</pre></div><div id="cell-6" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:44:28.078417Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:44:28.078045Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:44:28.442134Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:44:28.441452Z&quot;}" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    ggplot(mpg) </span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_bar(aes(x<span class="op">=</span><span class="st">"class"</span>, fill<span class="op">=</span><span class="st">"drv"</span>))</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> coord_flip()</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> theme_classic()</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-7" class="cell markdown">
+<section id="horizontal-bar-plot-with-counts" class="level3">
+<h3 class="anchored" data-anchor-id="horizontal-bar-plot-with-counts">Horizontal Bar Plot with Counts</h3>
+</section>
+</div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [5]:</pre></div><div id="cell-8" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:04:54.120491Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:04:54.120276Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:04:54.442605Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:04:54.441908Z&quot;}" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gallery, distributions</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    ggplot(mpg) </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_bar(aes(x<span class="op">=</span><span class="st">"class"</span>, fill<span class="op">=</span><span class="st">"drv"</span>))</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> coord_flip()</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> theme_classic()</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div class="">
 <figure class="figure">

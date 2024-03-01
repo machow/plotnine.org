@@ -113,7 +113,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">plotnine 0.0.post1+ga171cd7</span>
+    <span class="navbar-title">plotnine 0.0.post20+ga171cd7</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -270,7 +270,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
 <div class="quarto-embed-nb-cell">
-<div id="cell-0" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:47:06.544902Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:47:06.544581Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:47:07.838570Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:47:07.837769Z&quot;}" data-execution_count="1">
+<div id="cell-0" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:07:22.038802Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:07:22.038507Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:07:23.165840Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:07:23.165025Z&quot;}" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> (</span>
@@ -292,7 +292,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><em>Using a transformed x-axis to visualise guitar chords</em></p>
 <p>The x-axis is transformed to resemble the narrowing width of frets on a 25.5 inch Strat. To do that we create custom transformation.</p>
 <p>The key parts of <em>any</em> transform object are the <code>transform</code> and <code>inverse</code> functions.</p>
-<div id="cell-3" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:47:07.842920Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:47:07.842515Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:47:07.850172Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:47:07.849439Z&quot;}" data-execution_count="2">
+<div id="cell-3" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:07:23.169515Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:07:23.169161Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:07:23.175126Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:07:23.174526Z&quot;}" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> frets_trans(trans):</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Frets Transformation</span></span>
@@ -327,7 +327,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>The above transform is different from most in that, breaks and minor breaks do not change. This is common of very specialized scales. It can also be a key requirement when creating graphics for demontration purposes.</p>
 <p>Some chord Data</p>
-<div id="cell-6" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:47:07.853670Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:47:07.853409Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:47:07.859813Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:47:07.859126Z&quot;}" data-execution_count="3">
+<div id="cell-6" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:07:23.178504Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:07:23.178252Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:07:23.184265Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:07:23.183659Z&quot;}" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Notes: the 0 fret is an open strum, all other frets are played half-way between fret bars.</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># The strings are 1:low E, 2: A, 3: D, 4: G, 5: B, 6: E</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>c_chord <span class="op">=</span> pd.DataFrame({<span class="st">"Fret"</span>: [<span class="dv">0</span>, <span class="fl">2.5</span>, <span class="fl">1.5</span>, <span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">0</span>], <span class="st">"String"</span>: [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]})</span>
@@ -344,21 +344,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Visualizing the chord</p>
-<div id="cell-8" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:47:07.863300Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:47:07.863040Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:47:08.651534Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:47:08.650802Z&quot;}" data-scrolled="true" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Look and feel of the graphic</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>neck_color <span class="op">=</span> <span class="st">"#FFDDCC"</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>fret_color <span class="op">=</span> <span class="st">"#998888"</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>string_color <span class="op">=</span> <span class="st">"#AA9944"</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>neck_theme <span class="op">=</span> theme(</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    figure_size<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">2</span>),</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    panel_background<span class="op">=</span>element_rect(fill<span class="op">=</span>neck_color),</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    panel_grid_major_y<span class="op">=</span>element_line(color<span class="op">=</span>string_color, size<span class="op">=</span><span class="fl">2.2</span>),</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    panel_grid_major_x<span class="op">=</span>element_line(color<span class="op">=</span>fret_color, size<span class="op">=</span><span class="fl">2.2</span>),</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    panel_grid_minor_x<span class="op">=</span>element_line(color<span class="op">=</span>fret_color, size<span class="op">=</span><span class="dv">1</span>),</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Gallery Plot</span></span>
+<div id="cell-8" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:07:23.187162Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:07:23.186926Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:07:23.882180Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:07:23.881617Z&quot;}" data-scrolled="true" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gallery, complex</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Look and feel of the graphic</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>neck_color <span class="op">=</span> <span class="st">"#FFDDCC"</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>fret_color <span class="op">=</span> <span class="st">"#998888"</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>string_color <span class="op">=</span> <span class="st">"#AA9944"</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>neck_theme <span class="op">=</span> theme(</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    figure_size<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">2</span>),</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    panel_background<span class="op">=</span>element_rect(fill<span class="op">=</span>neck_color),</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    panel_grid_major_y<span class="op">=</span>element_line(color<span class="op">=</span>string_color, size<span class="op">=</span><span class="fl">2.2</span>),</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    panel_grid_major_x<span class="op">=</span>element_line(color<span class="op">=</span>fret_color, size<span class="op">=</span><span class="fl">2.2</span>),</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    panel_grid_minor_x<span class="op">=</span>element_line(color<span class="op">=</span>fret_color, size<span class="op">=</span><span class="dv">1</span>),</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>(</span>
 <span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    ggplot(c_chord, aes(<span class="st">"Fret"</span>, <span class="st">"String"</span>))</span>

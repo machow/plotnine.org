@@ -116,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">plotnine 0.0.post1+ga171cd7</span>
+    <span class="navbar-title">plotnine 0.0.post20+ga171cd7</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -199,7 +199,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div id="cell-1" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:44:40.764862Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:44:40.764436Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:44:41.464909Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:44:41.464160Z&quot;}" data-jupyter="{&quot;outputs_hidden&quot;:true}" data-execution_count="1">
+<div id="cell-1" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:05:05.624562Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:05:05.624206Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:05:06.226533Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:05:06.225755Z&quot;}" data-jupyter="{&quot;outputs_hidden&quot;:true}" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> (</span>
@@ -218,7 +218,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p><em>Visualising on a single plot the values of a variable that has nested (and independent) variables</em></p>
 <p>Create the data</p>
-<div id="cell-4" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:44:41.468668Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:44:41.468324Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:44:41.484709Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:44:41.484016Z&quot;}" data-execution_count="2">
+<div id="cell-4" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:05:06.230093Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:05:06.229769Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:05:06.243837Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:05:06.243185Z&quot;}" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    {</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">"variable"</span>: [</span>
@@ -328,7 +328,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>We want to visualise this data and at a galance get an idea to how the <code>value</code> breaks down along the <code>category</code>s for the different <code>variable</code>. Note that each <code>variable</code> has different <code>category</code>s.</p>
 <p>First we make a simple plot with all this information and see what to draw from it.</p>
-<div id="cell-6" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:44:41.530395Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:44:41.529539Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:44:42.855051Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:44:42.854337Z&quot;}" data-execution_count="3">
+<div id="cell-6" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:05:06.282972Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:05:06.282716Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:05:07.478483Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:05:07.477853Z&quot;}" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>(</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    ggplot(df, aes(x<span class="op">=</span><span class="st">"variable"</span>, y<span class="op">=</span><span class="st">"value"</span>, fill<span class="op">=</span><span class="st">"category"</span>))</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_col()</span>
@@ -342,7 +342,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>All the <code>value</code>s along each variable add up to 100, but stacked together the difference within and without the groups is not clear. The solution is to <code>dodge</code> the bars.</p>
-<div id="cell-8" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:44:42.858281Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:44:42.857938Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:44:43.158223Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:44:43.157468Z&quot;}" data-execution_count="4">
+<div id="cell-8" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:05:07.482266Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:05:07.481787Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:05:07.756277Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:05:07.755613Z&quot;}" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>(</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    ggplot(df, aes(x<span class="op">=</span><span class="st">"variable"</span>, y<span class="op">=</span><span class="st">"value"</span>, fill<span class="op">=</span><span class="st">"category"</span>))</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_col(stat<span class="op">=</span><span class="st">"identity"</span>, position<span class="op">=</span><span class="st">"dodge"</span>)  <span class="co"># modified</span></span>
@@ -358,7 +358,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This is good, it gives us the plot we want but the legend is not great. Each <code>variable</code> has a different set of <code>category</code>s, but the legend has them all clamped together. We cannot easily change the legend, but we can replicate it’s purpose by labelling the individual bars.</p>
 <p>To do this, we create a <code>geom_text</code> with <code>position_dodge(width=0.9)</code> to match the ratio of the space taken up by each variable. If there was no spacing between the bars of different variables, we would have <code>width=1</code>.</p>
 <p>A minor quack, when text extends beyond the limits we have to manually make space or it would get clipped. Therefore we adjust the bottom <code>y</code> limits.</p>
-<div id="cell-10" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:44:43.160987Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:44:43.160752Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:44:43.478756Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:44:43.478152Z&quot;}" data-execution_count="5">
+<div id="cell-10" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:05:07.759180Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:05:07.758832Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:05:08.037294Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:05:08.036700Z&quot;}" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>dodge_text <span class="op">=</span> position_dodge(width<span class="op">=</span><span class="fl">0.9</span>)  <span class="co"># new</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>(</span>
@@ -383,7 +383,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Would it look too crowded if we add value labels on top of the bars?</p>
-<div id="cell-12" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:44:43.482259Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:44:43.482012Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:44:43.885824Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:44:43.885180Z&quot;}" data-execution_count="6">
+<div id="cell-12" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:05:08.040109Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:05:08.039899Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:05:08.397767Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:05:08.397117Z&quot;}" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>dodge_text <span class="op">=</span> position_dodge(width<span class="op">=</span><span class="fl">0.9</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>(</span>
@@ -415,11 +415,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>That looks okay. The <code>value</code>s line up with the <code>category</code>s because we used the same <code>dodge</code> parameters. For the final polish, we remove the y-axis, clear out the panel and make the <code>variable</code> and <code>category</code> labels have the same color.</p>
-<div id="cell-14" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:44:43.888620Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:44:43.888384Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:44:44.267009Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:44:44.266436Z&quot;}" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>dodge_text <span class="op">=</span> position_dodge(width<span class="op">=</span><span class="fl">0.9</span>)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>ccolor <span class="op">=</span> <span class="st">"#555555"</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Gallery Plot</span></span>
+<div id="cell-14" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:05:08.400638Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:05:08.400398Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:05:08.737725Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:05:08.737021Z&quot;}" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gallery, bars</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>dodge_text <span class="op">=</span> position_dodge(width<span class="op">=</span><span class="fl">0.9</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>ccolor <span class="op">=</span> <span class="st">"#555555"</span></span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>(</span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    ggplot(df, aes(x<span class="op">=</span><span class="st">"variable"</span>, y<span class="op">=</span><span class="st">"value"</span>, fill<span class="op">=</span><span class="st">"category"</span>))</span>

@@ -113,7 +113,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">plotnine 0.0.post1+ga171cd7</span>
+    <span class="navbar-title">plotnine 0.0.post20+ga171cd7</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -179,8 +179,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#plotnine.geom_area" id="toc-plotnine.geom_area" class="nav-link active" data-scroll-target="#plotnine.geom_area"><code class="doc-symbol doc-symbol-class"></code> <span class="doc-object-name doc-class-name">plotnine.geom_area</span></a></li>
   <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters">Parameters</a></li>
   <li><a href="#see-also" id="toc-see-also" class="nav-link" data-scroll-target="#see-also">See Also</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a></li>
   </ul>
-</nav>
+<div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="examples/geom_area-preview.html"><i class="bi bi-journal-code"></i>Shaded Area Under Line</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -326,6 +327,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </dd>
 </dl>
+</section>
+<section id="examples" class="level2">
+<h2 class="anchored" data-anchor-id="examples">Examples</h2>
+<div class="quarto-embed-nb-cell">
+<div id="cell-0" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:04:45.642257Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:04:45.641907Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:04:46.344834Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:04:46.344027Z&quot;}" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> ggplot, aes, geom_area, geom_line</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine.data <span class="im">import</span> economics</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="shaded-area-under-line" class="level3">
+<h3 class="anchored" data-anchor-id="shaded-area-under-line">Shaded Area Under Line</h3>
+<div id="cell-2" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:04:46.348267Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:04:46.348006Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:04:48.224099Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:04:48.223191Z&quot;}" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gallery, lines</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    ggplot(economics, aes(x<span class="op">=</span><span class="st">"date"</span>, y<span class="op">=</span><span class="st">"unemploy"</span>))</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_line()</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_area(fill<span class="op">=</span><span class="st">"turquoise"</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="geom_area_files/figure-html/examples-geom_area-cell-3-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<a class="quarto-notebook-link" id="nblink-1" href="examples/geom_area-preview.html#cell-0">Source: Shaded Area Under Line</a></div>
 
 
 </section>

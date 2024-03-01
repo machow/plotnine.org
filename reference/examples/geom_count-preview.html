@@ -208,7 +208,7 @@
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">plotnine 0.0.post1+ga171cd7</span>
+    <span class="navbar-title">plotnine 0.0.post20+ga171cd7</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -289,7 +289,7 @@
   
 
 
-</header>   <div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="cell-1" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:44:48.678265Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:44:48.677877Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:44:49.487796Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:44:49.487050Z&quot;}" data-execution_count="1">
+</header>   <div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="cell-1" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:05:12.849107Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:05:12.848720Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:05:13.559205Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:05:13.558447Z&quot;}" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> ggplot, aes, geom_count, scale_size_continuous</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine.data <span class="im">import</span> diamonds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -297,7 +297,7 @@
 <div id="cell-2" class="cell markdown">
 <p><em>geom_count() makes the point size proportional to the number of points at a location</em></p>
 </div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div id="cell-3" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:44:49.491470Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:44:49.491188Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:44:49.508846Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:44:49.508197Z&quot;}" data-scrolled="true" data-execution_count="2">
+<div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div id="cell-3" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:05:13.562521Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:05:13.562269Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:05:13.577393Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:05:13.576787Z&quot;}" data-scrolled="true" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>diamonds.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <div>
@@ -393,7 +393,7 @@
 </div>
 </div>
 </div></div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="cell-4" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:44:49.555269Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:44:49.554971Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:44:51.114398Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:44:51.113587Z&quot;}" data-execution_count="3">
+<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="cell-4" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:05:13.619126Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:05:13.618865Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:05:15.047665Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:05:15.046986Z&quot;}" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>(</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    ggplot(diamonds)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_count(aes(x<span class="op">=</span><span class="st">"cut"</span>, y<span class="op">=</span><span class="st">"color"</span>))</span>
@@ -409,7 +409,7 @@
 <div id="cell-5" class="cell markdown">
 <p>We can adjust the size range of the points with <code>scale_size_continuous</code></p>
 </div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [4]:</pre></div><div id="cell-6" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-02-17T18:44:51.117454Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-02-17T18:44:51.117137Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-02-17T18:44:51.720547Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-02-17T18:44:51.719953Z&quot;}" data-execution_count="4">
+<div class="cell-container"><div class="cell-decorator"><pre>In [4]:</pre></div><div id="cell-6" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-01T15:05:15.051299Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-01T15:05:15.050917Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-01T15:05:15.600404Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-01T15:05:15.599865Z&quot;}" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>(</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    ggplot(diamonds)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_count(aes(x<span class="op">=</span><span class="st">"cut"</span>, y<span class="op">=</span><span class="st">"color"</span>))</span>
