@@ -240,7 +240,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 <p>The <strong>bold</strong> aesthetics are required.</p>
 </dd>
-<dt><code><span class="doc-parameter-name">data</span> <span class="doc-parameter-annotation-sep">:</span> <span class="doc-parameter-annotation"><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame">DataFrame</a></span> <span class="doc-parameter-default-sep">=</span> <span class="doc-parameter-default">None</span></code></dt>
+<dt><code><span class="doc-parameter-name">data</span> <span class="doc-parameter-annotation-sep">:</span> <span class="doc-parameter-annotation">DataFrame</span> <span class="doc-parameter-default-sep">=</span> <span class="doc-parameter-default">None</span></code></dt>
 <dd>
 <p>The data to be displayed in this layer. If <code class="sourceCode python"><span class="va">None</span></code>, the data from from the <code class="sourceCode python">ggplot()</code> call is used. If specified, it overrides the data from the <code class="sourceCode python">ggplot()</code> call.</p>
 </dd>
@@ -258,13 +258,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </dd>
 <dt><code><span class="doc-parameter-name">distribution</span> <span class="doc-parameter-annotation-sep">:</span> <span class="doc-parameter-annotation"><a href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span> <span class="doc-parameter-default-sep">=</span> <span class="doc-parameter-default"><span class="st">"norm"</span></span></code></dt>
 <dd>
-<p>Distribution or distribution function name. The default is <em>norm</em> for a normal probability plot. Objects that look enough like a stats.distributions instance (i.e.&nbsp;they have a ppf method) are also accepted. See <a href="https://docs.scipy.org/doc/scipy/reference/stats.html#module-scipy.stats">scipy stats</a> for available distributions.</p>
+<p>Distribution or distribution function name. The default is <em>norm</em> for a normal probability plot. Objects that look enough like a stats.distributions instance (i.e.&nbsp;they have a ppf method) are also accepted. See scipy stats for available distributions.</p>
 </dd>
 <dt><code><span class="doc-parameter-name">dparams</span> <span class="doc-parameter-annotation-sep">:</span> <span class="doc-parameter-annotation"><a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a></span> <span class="doc-parameter-default-sep">=</span> <span class="doc-parameter-default">None</span></code></dt>
 <dd>
 <p>Distribution-specific shape parameters (shape parameters plus location and scale).</p>
 </dd>
-<dt><code><span class="doc-parameter-name">quantiles</span> <span class="doc-parameter-annotation-sep">:</span> <span class="doc-parameter-annotation"><a href="https://numpy.org/doc/stable/glossary.html#term-array_like">array_like</a></span> <span class="doc-parameter-default-sep">=</span> <span class="doc-parameter-default">None</span></code></dt>
+<dt><code><span class="doc-parameter-name">quantiles</span> <span class="doc-parameter-annotation-sep">:</span> <span class="doc-parameter-annotation">array_like</span> <span class="doc-parameter-default-sep">=</span> <span class="doc-parameter-default">None</span></code></dt>
 <dd>
 <p>Probability points at which to calculate the theoretical quantile values. If provided, must be the same number as as the sample data points. The default is to use calculated theoretical points, use to <code>alpha_beta</code> control how these points are generated.</p>
 </dd>
@@ -290,7 +290,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="see-also" class="level2 doc-see-also">
 <h2 class="doc-see-also anchored" data-anchor-id="see-also">See Also</h2>
 <dl>
-<dt><a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.mstats.plotting_positions.html#scipy.stats.mstats.plotting_positions"><code>plotting_positions</code></a></dt>
+<dt><code>plotting_positions</code></dt>
 <dd>
 <p>Uses <code>alpha_beta</code> to calculate the quantiles.</p>
 </dd>

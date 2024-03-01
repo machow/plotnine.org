@@ -976,7 +976,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><em>(2017-05-18)</em></p>
 <ul>
 <li><p>Fixed bug in <a href="./reference/scale_x_discrete.html#plotnine.scale_x_discrete"><code>scale_x_discrete</code></a> and <a href="./reference/scale_y_discrete.html#plotnine.scale_y_discrete"><code>scale_y_discrete</code></a> where if they were instantiated with parameter <code>limits</code> that is either a numpy array or a pandas series, plotting would fail with a <code>ValueError</code>.</p></li>
-<li><p>Fixed exceptions when using <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.pivot_table.html#pandas.pivot_table"><code>pandas.pivot_table</code></a> for Pandas v0.20.0. The API was <a href="http://pandas.pydata.org/pandas-docs/version/0.20/whatsnew.html#pivot-table-always-returns-a-dataframe">fixed</a>.</p></li>
+<li><p>Fixed exceptions when using <code>pandas.pivot_table</code> for Pandas v0.20.0. The API was <a href="http://pandas.pydata.org/pandas-docs/version/0.20/whatsnew.html#pivot-table-always-returns-a-dataframe">fixed</a>.</p></li>
 <li><p>Fixed issues where lines/paths with segments that all belonged in the same group had joins that in some cases were “butted”.</p></li>
 </ul>
 <section id="api-changes-10" class="level3">

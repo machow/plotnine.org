@@ -256,7 +256,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">"count"</span>   <span class="co"># number of points in bin</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">"density"</span> <span class="co"># density of points in bin, scaled to integrate to 1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </dd>
-<dt><code><span class="doc-parameter-name">data</span> <span class="doc-parameter-annotation-sep">:</span> <span class="doc-parameter-annotation"><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame">DataFrame</a></span> <span class="doc-parameter-default-sep">=</span> <span class="doc-parameter-default">None</span></code></dt>
+<dt><code><span class="doc-parameter-name">data</span> <span class="doc-parameter-annotation-sep">:</span> <span class="doc-parameter-annotation">DataFrame</span> <span class="doc-parameter-default-sep">=</span> <span class="doc-parameter-default">None</span></code></dt>
 <dd>
 <p>The data to be displayed in this layer. If <code class="sourceCode python"><span class="va">None</span></code>, the data from from the <code class="sourceCode python">ggplot()</code> call is used. If specified, it overrides the data from the <code class="sourceCode python">ggplot()</code> call.</p>
 </dd>
@@ -276,7 +276,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <dd>
 <p>Number of bins. Overridden by binwidth.</p>
 </dd>
-<dt><code><span class="doc-parameter-name">breaks</span> <span class="doc-parameter-annotation-sep">:</span> <span class="doc-parameter-annotation"><a href="https://numpy.org/doc/stable/glossary.html#term-array_like">array_like</a> | <a href="https://docs.python.org/3/library/stdtypes.html#tuple">tuple</a>[<a href="https://numpy.org/doc/stable/glossary.html#term-array_like">array_like</a>, <a href="https://numpy.org/doc/stable/glossary.html#term-array_like">array_like</a>]</span> <span class="doc-parameter-default-sep">=</span> <span class="doc-parameter-default">None</span></code></dt>
+<dt><code><span class="doc-parameter-name">breaks</span> <span class="doc-parameter-annotation-sep">:</span> <span class="doc-parameter-annotation">array_like | <a href="https://docs.python.org/3/library/stdtypes.html#tuple">tuple</a>[array_like, array_like]</span> <span class="doc-parameter-default-sep">=</span> <span class="doc-parameter-default">None</span></code></dt>
 <dd>
 <p>Bin boundaries. This supercedes the <code>binwidth</code>, <code>bins</code>, <code>center</code> and <code>boundary</code>. It can be an array_like or a list of two array_likes to provide distinct breaks for the <code>x</code> and <code>y</code> axes.</p>
 </dd>

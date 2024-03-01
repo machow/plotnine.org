@@ -202,7 +202,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="doc-parameters anchored" data-anchor-id="parameters">Parameters</h2>
 <div class="doc-definition-items">
 <dl>
-<dt><code><span class="doc-parameter-name">values</span> <span class="doc-parameter-annotation-sep">:</span> <span class="doc-parameter-annotation"><a href="https://numpy.org/doc/stable/glossary.html#term-array_like">array_like</a> | <a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a></span></code></dt>
+<dt><code><span class="doc-parameter-name">values</span> <span class="doc-parameter-annotation-sep">:</span> <span class="doc-parameter-annotation">array_like | <a href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a></span></code></dt>
 <dd>
 <p>Sizes that make up the palette. The values will be matched with the <code>limits</code> of the scale or the <code>breaks</code> if provided. If it is a dict then it should map data values to sizes.</p>
 </dd>
@@ -243,7 +243,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <dd>
 <p>list of <a href="https://docs.python.org/3/library/stdtypes.html#str"><code>str</code></a>. Aesthetics covered by the scale. These are defined by each scale and the user should probably not change them. Have fun.</p>
 </dd>
-<dt><code><span class="doc-parameter-name">limits</span> <span class="doc-parameter-annotation-sep">:</span> <span class="doc-parameter-annotation"><a href="https://numpy.org/doc/stable/glossary.html#term-array_like">array_like</a></span> <span class="doc-parameter-default-sep">=</span> <span class="doc-parameter-default">None</span></code></dt>
+<dt><code><span class="doc-parameter-name">limits</span> <span class="doc-parameter-annotation-sep">:</span> <span class="doc-parameter-annotation">array_like</span> <span class="doc-parameter-default-sep">=</span> <span class="doc-parameter-default">None</span></code></dt>
 <dd>
 <p>Limits of the scale. For scales that deal with categoricals, these may be a subset or superset of the categories. Data values that are not in the limits will be treated as missing data and represented with the <code>na_value</code>.</p>
 </dd>
